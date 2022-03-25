@@ -1,0 +1,30 @@
+.article1 {
+
+    width:400px;
+    height:400px;
+}
+
+.article1 img {
+    width:100%;
+}
+
+.article1 h1 {
+    font-size: 18px;
+}
+
+
+p {
+
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.haslo1 {
+    font-size: 40px;
+letter-spacing: 5px;;
+}
