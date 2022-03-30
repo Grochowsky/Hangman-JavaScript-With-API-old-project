@@ -12,19 +12,59 @@
     font-size: 18px;
 }
 
+body{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
 
+
+.alphabet {
+    display: flex;
+    padding: 0;
+    margin:0;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    align-items: center;
+    justify-content: center;
+
+
+}
 p {
 
-    border: 1px solid black;
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    -webkit-box-shadow: 9px 12px 45px 6px rgba(210, 210, 210, 1);
+    -moz-box-shadow: 9px 12px 45px 6px rgba(210, 210, 210, 1);
+    box-shadow: 9px 12px 45px 6px rgba(210, 210, 210, 1);
+}
+p:hover {
+    background-color: gray;
+    transition: all ease-in-out 0.2s;
 }
 
 .haslo1 {
     font-size: 40px;
-letter-spacing: 5px;;
+    letter-spacing: 10px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 20%;
+
 }

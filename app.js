@@ -1,5 +1,5 @@
 const p = document.querySelectorAll('p');
-const haslo = "adbbcda";
+const haslo = "siemanko".toUpperCase();
 let ukryte;
 let jeden;
 const hasloContainer = document.querySelector('.haslo1');
@@ -22,24 +22,30 @@ invisiblePassword()
 
 console.log(ukryte)
 
-
+let badClickCount = 1;
 
 
 p.forEach( (element) => {
     element.addEventListener('click', () => {
+        
+        let checkTheLetter = false;
         for(let i = 0; i<= haslo.length; i++){
             if(element.innerHTML == haslo[i] ){
-            //alert(i)
             newOne[i] = element.innerHTML;
-            newOne.join("")
             hasloContainer.innerHTML = newOne.join('');
-            
+            element.style.backgroundColor = 'green';
+            checkTheLetter = True;
+         
             }
+        }
+        if (checkTheLetter == false) {
+            element.style.backgroundColor = "red";
+            badClickCount++
+            console.log(`${badClickCount}`)
         }
        //hasloContainer.innerHTML += element.innerHTML;
     })
 })
-
 
 
 
