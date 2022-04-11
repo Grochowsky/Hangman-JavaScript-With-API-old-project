@@ -28,24 +28,35 @@ let badClickCount = 1;
 p.forEach( (element) => {
     element.addEventListener('click', () => {
         
-        let checkTheLetter = false;
+        let checkTheLetter = false; // sprawdzanie litery czy wystepuje wewnatrz hasla / domyslnie na false/ jesli jest wtedy zmienimy na true i nic nie zrobimy, a jesli zostanie fals wtedy zostanie wykonana nastepna czesc kodu
         for(let i = 0; i<= haslo.length; i++){
-            if(element.innerHTML == haslo[i] ){
-            newOne[i] = element.innerHTML;
-            hasloContainer.innerHTML = newOne.join('');
+            if(element.innerHTML == haslo[i] ){ //sprawdz czy dana litera znajduje sie w hasle
+            newOne[i] = element.innerHTML; // jeśli tak to przypis do indexu elementu newone tą wlasnie litere
+            hasloContainer.innerHTML = newOne.join(''); // nastepnie dodaj nowe haslo wewnątrz html haslocontainer
             element.style.backgroundColor = 'green';
             checkTheLetter = True;
          
             }
         }
         if (checkTheLetter == false) {
-            element.style.backgroundColor = "red";
-            badClickCount++
-            console.log(`${badClickCount}`)
+            if(element.style.backgroundColor === "red"){
+                console.log(element) // sprawdzdamy czy element ktory kliknelismy, czy zostal juz klikniety czy nie aby nie naliczac  bacclickcount....
+            } else {
+                element.style.backgroundColor = "red";
+                badClickCount++
+                console.log(`${badClickCount}`)
+            }
+            
         }
        //hasloContainer.innerHTML += element.innerHTML;
+       if(badClickCount === 10){
+           console.log("siemasdfsdf")
+       }
     })
+   
 })
+
+console.log("siemank")
 
 
 

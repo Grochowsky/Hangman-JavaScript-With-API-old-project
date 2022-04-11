@@ -1,16 +1,4 @@
-.article1 {
 
-    width:400px;
-    height:400px;
-}
-
-.article1 img {
-    width:100%;
-}
-
-.article1 h1 {
-    font-size: 18px;
-}
 
 body{
     font-family: 'Raleway', sans-serif;
@@ -66,5 +54,17 @@ p:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 20%;
+
+}
+
+.hangman {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.thedraw {
+    width: 50px;
+    height:1px;
+    background-color: black;
 
 }
