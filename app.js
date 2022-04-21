@@ -6,6 +6,17 @@ const hasloContainer = document.querySelector('.haslo1');
 let newOne = [];
 ukryte = haslo.split('')
 
+const podest = document.querySelector('.podest');
+const pion = document.querySelector('.pion');
+const poziom = document.querySelector('.poziom');
+const lina = document.querySelector('.lina');
+const glowa = document.querySelector('.glowa');
+const tulow = document.querySelector('.tulow');
+const preka = document.querySelector('.preka');
+const lreka = document.querySelector('.lreka');
+const pnoga = document.querySelector('.pnoga');
+const lngoa = document.querySelector('.lnoga');
+
 
 
 function invisiblePassword(){
@@ -22,7 +33,7 @@ invisiblePassword()
 
 console.log(ukryte)
 
-let badClickCount = 1;
+let badClickCount = 0;
 
 
 p.forEach( (element) => {
@@ -49,8 +60,37 @@ p.forEach( (element) => {
             
         }
        //hasloContainer.innerHTML += element.innerHTML;
-       if(badClickCount === 10){
-           console.log("siemasdfsdf")
+       switch(badClickCount){
+            case 1:
+                podest.style.display = "block";
+                break;
+            case 2:
+                pion.style.display = "block";
+                break;
+            case 3:
+                poziom.style.display = "block";
+                break;
+            case 4:
+                lina.style.display = "block";
+                break;
+            case 5:
+                glowa.style.display = "block";
+                break;
+            case 6:
+                tulow.style.display = "block";
+                break;
+            case 7:
+                preka.style.display = "block";
+                break;
+            case 8:
+                lreka.style.display = "block";
+                break;
+            case 9: 
+                pnoga.style.display = "block";
+                break;
+            case 10:
+                lngoa.style.display = "block";
+                break;
        }
     })
    
