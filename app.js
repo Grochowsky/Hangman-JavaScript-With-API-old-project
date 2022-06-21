@@ -59,6 +59,7 @@ p.forEach( (element) => {
             }
             
         }
+<<<<<<< HEAD
        //hasloContainer.innerHTML += element.innerHTML;
        switch(badClickCount){
             case 1:
@@ -92,6 +93,118 @@ p.forEach( (element) => {
                 lngoa.style.display = "block";
                 break;
        }
+=======
+        invisiblePassword()
+        
+        
+        console.log(ukryte)
+        
+        let badClickCount = 0;
+        
+        
+        p.forEach( (element) => {
+            element.addEventListener('click', () => {
+                
+                let checkTheLetter = 0; // sprawdzanie litery czy wystepuje wewnatrz hasla / domyslnie na false/ jesli jest wtedy zmienimy na true i nic nie zrobimy, a jesli zostanie fals wtedy zostanie wykonana nastepna czesc kodu
+                for(let i = 0; i<= haslo.length; i++){
+                    if(element.innerHTML == haslo[i] ){ //sprawdz czy dana litera znajduje sie w hasle
+                    newOne[i] = element.innerHTML; // jeśli tak to przypis do indexu elementu newone tę wlasnie litere
+                    hasloContainer.innerHTML = newOne.join(''); // nastepnie dodaj nowe haslo wewnątrz html haslocontainer
+                    element.style.backgroundColor = 'green';
+                    checkTheLetter = 1;
+                    console.log(newOne) 
+                    console.log(ukryte)    
+                        
+                    }
+                }
+                if (checkTheLetter == 0) {
+                    if(element.style.backgroundColor === "red"){
+                        console.log(element) // sprawdzdamy czy element ktory kliknelismy, czy zostal juz klikniety czy nie aby nie naliczac  bacclickcount....
+                    } else {
+                        element.style.backgroundColor = "red";
+                        badClickCount++
+                        console.log(`${badClickCount}`)
+                    }
+                    
+                }
+               //hasloContainer.innerHTML += element.innerHTML;
+               switch(badClickCount){
+                    case 1:
+                        podest.style.display = "block";
+                        break;
+                    case 2:
+                        pion.style.display = "block";
+                        break;
+                    case 3:
+                        poziom.style.display = "block";
+                        break;
+                    case 4:
+                        lina.style.display = "block";
+                        break;
+                    case 5:
+                        glowa.style.display = "block";
+                        break;
+                    case 6:
+                        tulow.style.display = "block";
+                        break;
+                    case 7:
+                        preka.style.display = "block";
+                        break;
+                    case 8:
+                        lreka.style.display = "block";
+                        break;
+                    case 9: 
+                        pnoga.style.display = "block";
+                        break;
+                    case 10:
+                        lngoa.style.display = "block";
+                        break;
+               }
+               if(badClickCount == 10){
+                   console.log('end');
+                   const endGame = () => {
+                       const endGameDiv = document.createElement('div');
+                       endGameDiv.innerHTML = ` 
+                       <div class="dark"></div>
+                        <div class="endGameContainer">
+                        <h1>YOU LOSE</h1>
+                        <button class="restartGame">RESTART GAME</button>
+                        </div>
+                       
+                        
+                       `;
+                       container.appendChild(endGameDiv);
+                       const restartGame = document.querySelector('.restartGame')
+                        restartGame.addEventListener('click', () => {
+                            location.reload()
+                        })
+                   }
+                   endGame()
+                   //location.reload()
+               }
+               if(newOne.toString() === ukryte.toString()){
+                   const winGame = document.createElement('div');
+                   winGame.innerHTML = ` <div class="dark"></div>
+                   <div class="endGameContainer">
+                   <h1>YOU WIN</h1>
+                   <button class="restartGame">RESTART GAME</button>
+                   </div>`;
+                   container.appendChild(winGame);
+                   const restartGame = document.querySelector('.restartGame')
+                        restartGame.addEventListener('click', () => {
+                            location.reload()
+                        })
+
+               }
+
+               
+             
+            })
+           
+        })
+        //TU BEDZIE KOT Z ZEWNATRZ KONIEC
+        
+>>>>>>> 2859752... finish
     })
    
 })
