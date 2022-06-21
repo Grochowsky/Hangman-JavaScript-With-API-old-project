@@ -59,41 +59,6 @@ p.forEach( (element) => {
             }
             
         }
-<<<<<<< HEAD
-       //hasloContainer.innerHTML += element.innerHTML;
-       switch(badClickCount){
-            case 1:
-                podest.style.display = "block";
-                break;
-            case 2:
-                pion.style.display = "block";
-                break;
-            case 3:
-                poziom.style.display = "block";
-                break;
-            case 4:
-                lina.style.display = "block";
-                break;
-            case 5:
-                glowa.style.display = "block";
-                break;
-            case 6:
-                tulow.style.display = "block";
-                break;
-            case 7:
-                preka.style.display = "block";
-                break;
-            case 8:
-                lreka.style.display = "block";
-                break;
-            case 9: 
-                pnoga.style.display = "block";
-                break;
-            case 10:
-                lngoa.style.display = "block";
-                break;
-       }
-=======
         invisiblePassword()
         
         
@@ -204,7 +169,6 @@ p.forEach( (element) => {
         })
         //TU BEDZIE KOT Z ZEWNATRZ KONIEC
         
->>>>>>> 2859752... finish
     })
    
 })
