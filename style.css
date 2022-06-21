@@ -208,3 +208,32 @@ p:hover {
     }
     
     /* HUMAN RYSUJEMY*/
+
+    .endGameContainer {
+        position: fixed;
+        width: 500px;
+        height: 400px;
+        top: 30%;
+        left: 40%;
+        z-index: 99999;
+        background-color: rgb(228, 228, 228);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .dark {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: ' ';
+        background: rgba(0,0,0,.5);
+    }
+
+    .endGameContainer button {
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
