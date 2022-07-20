@@ -1,12 +1,12 @@
 {
-"scripts": {
+  "scripts": {
     "format": "prettier --write app",
     "start": "http-server"
-      },
-  "devDependencies": {
-    "prettier": "2.7.1"
   },
   "dependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^0.12.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
   }
 }
