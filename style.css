@@ -70,16 +70,6 @@ p:hover {
 }
 
 
-
-
-
-
-
-
-
-
-/* RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR*/
-
 .szubienica {
 
     height: 500px;
@@ -88,10 +78,6 @@ p:hover {
     }
     
     
-    
-    
-    
-    /* SZUBIERYSUJEMY */
     .podest {
         width:20%;
         height:5px;
@@ -127,11 +113,11 @@ p:hover {
         display: none;
     
     }
-    /* SZUBIERYSUJEMY */
+
     
     
     
-    /* HUMAN RYSUJEMY*/
+
     .glowa {
         width:20%;
         height: 20%;
@@ -141,7 +127,6 @@ p:hover {
         left:50%;
         top: 20%;
         display: none;
-        /*animation: leftright 3s ease-in-out infinite;*/
     }
     
     @keyframes leftright {
@@ -207,7 +192,6 @@ p:hover {
         display: none;
     }
     
-    /* HUMAN RYSUJEMY*/
 
     .endGameContainer {
         position: fixed;
